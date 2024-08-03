@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: hsl(75, 94%, 57%);
+
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    background-color: var(--off-black);
+    color: white;
+    place-content: center;
+}
+
+.card-wrapper {
+    margin: auto;
+    background-color: var(--dark-grey);
+    max-width: 400px;
+    display: grid;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+@media (max-width: 400px) {
+    .card-wrapper {
+        margin-inline: 1rem;
+    }
+}
+
+.card-wrapper p {
+    font-size: .85rem;
+}
+
+.profile-image > img {
+    border-radius: 50%;
+    width: 90px;
+    aspect-ratio: 1;
+}
+
+.header-title {
+    display: grid;
+    gap: .5rem;
+}
+
+.header-title h1 {
+    font-size: 1.5rem;
+}
+
+.header-title h2 {
+    font-size: .9rem;
+    color: var(--green);
+}
+
+.social-links {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--grey);
+    border-radius: .5rem;
+    padding: 1rem;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    color: black;
+    background-color: var(--green);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.attribution {
+    text-align: center;
+    font-size: .8rem;
+    transform: translateY(1rem);
+}
+
+.attribution a {
+    color: var(--green);
+}
